@@ -13,8 +13,8 @@ import { EventEmitter } from 'events';
 import * as math from '../math';
 import { IVec2 } from '../../common';
 
-/** Shorter gestures will not lead to selections. */
-const MIN_STROKE_LENGTH = 150;
+/** Shorter gestures will not lead to selections. DEFAULT 150 */
+const MIN_STROKE_LENGTH = 50;
 
 /** Smaller turns will not lead to selections. */
 const MIN_STROKE_ANGLE = 20;
