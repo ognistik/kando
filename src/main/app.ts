@@ -835,7 +835,7 @@ export class KandoApp {
       // Also wait with the execution of the selected action until the fade-out
       // animation is finished to make sure that any resulting events (such as virtual
       // key presses) are not captured by the window.
-      this.hideWindow(400).then(() => {
+      this.hideWindow(0).then(() => {       //MY-KANDO set to 0... original at 400
         // If the action is delayed, we execute it after the window is hidden.
         if (executeDelayed) {
           execute(item);
@@ -846,7 +846,7 @@ export class KandoApp {
     // We do not hide the window immediately when the user aborts a selection. Instead, we
     // wait for the fade-out animation to finish.
     ipcMain.on('cancel-selection', () => {
-      this.hideWindow(300);
+      this.hideWindow(0); //MY-KANDO set to 0... original at 300
     });
   }
 
